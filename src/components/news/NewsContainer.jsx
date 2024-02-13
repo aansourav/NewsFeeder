@@ -1,9 +1,9 @@
-import LeftNewsContainer from "./left/LeftNewsContainer";
-import RightNewsContainer from "./right/RightNewsContainer";
+import LeftNewsContainer from "./LeftNewsContainer";
+import RightNewsContainer from "./RightNewsContainer";
 
 const NewsContainer = () => {
   return (
-    <main className="my-10 lg:my-14">
+    <main className="my-10 lg:my-14 lg:mx-10">
       <div className="container mx-auto grid grid-cols-12 gap-8">
         <LeftNewsContainer />
         <RightNewsContainer />

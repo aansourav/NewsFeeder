@@ -1,9 +1,10 @@
-import thumb from "./../../../assets/thumb.png";
-import thumb_lg from "./../../../assets/thumb_lg.png";
+import thumb from "./../../assets/thumb.png";
+import thumb_lg from "./../../assets/thumb_lg.png";
 
 const LeftNewsContainer = () => {
   return (
     <div className="col-span-12 grid grid-cols-12 gap-6 self-start xl:col-span-8">
+
       <div className="col-span-12 grid grid-cols-12 gap-4">
         <div className="col-span-12 lg:col-span-4">
           <a href="/">
@@ -57,7 +58,9 @@ const LeftNewsContainer = () => {
           </p>
           <p className="mt-5 text-base text-[#94908C]">Yesterday</p>
         </div>
+
       </div>
+
     </div>
   );
 };
