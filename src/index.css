@@ -1,3 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&family=Publico+Headline+Web:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+}
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Publico Headline Web", serif;
+  line-height: 110%;
+}
+
+a {
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #00d991;
+}
+
+.container {
+  padding: 0 1rem;
+}
