@@ -1,43 +1,23 @@
-import logo from "./../assets/logo_light.png";
+import logo from "./../../assets/logo_light.png";
+import NewsCategoryItem from "./NewsCategoryItem";
+import TermsPageItem from "./TermsPageItem";
 const Footer = () => {
+  let categories = ["Home", "General", "Business", "Entertainment", "Health", "Science"];
+  let siteLinks = ["Terms of Use", "Cookies Policy", "Manage Cookies", "Accessibility", "Contact Us"];
+
   return (
     <footer className="bg-neutral-800 pb-8 pt-20 text-white sm:pt-24">
       <div className="container mx-auto">
         <div className="xl:grid xl:grid-cols-12 xl:gap-8">
           <div className="grid grid-cols-2 gap-8 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:col-span-7 xl:grid-cols-5">
             <img className="max-md:col-span-2" src={logo} alt="lws" />
+
             <ul role="list" className="space-y-4">
-              <li>
-                <a href="/" className="text-sm font-semibold">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-sm font-semibold">
-                  General
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-sm font-semibold">
-                  Business
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-sm font-semibold">
-                  Entertainment
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-sm font-semibold">
-                  Health
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-sm font-semibold">
-                  Science
-                </a>
-              </li>
+              {categories.map((item) => (
+                <NewsCategoryItem key={item} name={item}></NewsCategoryItem>
+              ))}
             </ul>
+
             <ul role="list" className="space-y-4">
               <li>
                 <a href="/" className="text-sm font-semibold">
@@ -50,38 +30,14 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+
+
             <ul role="list" className="space-y-4">
-              <li>
-                <a href="/" className="text-sm">
-                  Terms of Use
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-sm">
-                  Privacy
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-sm">
-                  Cookies Policy
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-sm">
-                  Manage Cookies
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-sm">
-                  Accessibility
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-sm">
-                  Contact Us
-                </a>
-              </li>
+              {
+                siteLinks.map(item=><TermsPageItem key={item} name={item} ></TermsPageItem>)
+              }
             </ul>
+
             <div className="flex space-x-6">
               <a>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -122,7 +78,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <button className="rounded-full bg-[#00D991] px-7 py-2.5 text-xs font-medium text-[#F1EFEA] hover:opacity-80 lg:text-base">
+            <button className="rounded-full bg-[#21a77a] px-7 py-2.5 text-xs font-medium text-white hover:bg-[#3bbe93] lg:text-base">
               Subscribe
             </button>
           </div>

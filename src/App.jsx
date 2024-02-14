@@ -1,7 +1,21 @@
-import Page from "./Page";
+
+
+import Footer from "./components/Footer/Footer";
+import NavBar from "./components/NavBar";
+
+import NewsBoard from "./components/NewsBoard";
+import NewsContextProvider from "./context/newsContext";
 
 function App() {
-  return <Page />;
+  return (
+    <>
+      <NewsContextProvider>
+        <NavBar />
+        <NewsBoard />
+      </NewsContextProvider>
+      <Footer/>
+    </>
+  );
 }
 
 export default App;
