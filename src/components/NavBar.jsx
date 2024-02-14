@@ -3,7 +3,7 @@ import { getFormatDate } from "../utilis/getFormatDate";
 import CategoriesMenu from "./CategoriesMenu";
 import SearchBox from "./SearchBox";
 
-export default function NavBar() {
+export default function Navbar() {
   return (
     <nav className="border-b border-black py-6 md:py-8">
       <div className="container mx-auto flex flex-col md:flex-row flex-wrap items-center justify-between gap-6">
