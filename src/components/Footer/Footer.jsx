@@ -1,4 +1,4 @@
-import logo from "./../../assets/logo_light.png";
+import logo from "./../../assets/logo.png";
 import NewsCategoryItem from "./NewsCategoryItem";
 import TermsPageItem from "./TermsPageItem";
 const Footer = () => {
@@ -31,11 +31,10 @@ const Footer = () => {
               </li>
             </ul>
 
-
             <ul role="list" className="space-y-4">
-              {
-                siteLinks.map(item=><TermsPageItem key={item} name={item} ></TermsPageItem>)
-              }
+              {siteLinks.map((item) => (
+                <TermsPageItem key={item} name={item}></TermsPageItem>
+              ))}
             </ul>
 
             <div className="flex space-x-6">
