@@ -1,5 +1,5 @@
 import Footer from "./components/Footer/Footer";
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import NewsBoard from "./components/NewsBoard";
 import NewsContextProvider from "./context/newsContext";
 

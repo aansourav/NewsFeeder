@@ -2,10 +2,9 @@ import { useContext, useState } from "react";
 import CloseIcon from "../assets/icons/close.svg";
 import SearchIcon from "../assets/icons/search.svg";
 import { NewsContext } from "../context/newsContext";
-import { debounce } from "../utilis/debounceControl";
-// import fatchData from "../utilis/fatchData";
+import { debounce } from "../utils/debounceControl";
 import useNewsQuery from "../hooks/useNewsQuery";
-import fetchData from "../utilis/fatchData";
+import fetchNewsData from "../utils/fetchNewsData";
 
 const SearchBox = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -27,7 +26,7 @@ const SearchBox = () => {
         setData(data);
       }, 700);
     } else {
-      const newdata = await fetchData();
+      const newdata = await fetchNewsData();
       setData(newdata);
     }
   };

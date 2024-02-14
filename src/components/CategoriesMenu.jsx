@@ -1,7 +1,6 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import { NewsContext } from "../context/newsContext";
 import useNewsQuery from "../hooks/useNewsQuery";
-import { debounce } from "../utilis/debounceControl";
 
 export default function CategoriesMenu() {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -44,9 +43,7 @@ export default function CategoriesMenu() {
           <a
             href="#"
             onClick={() => handleClick("entertainment")}
-            className={`${
-              selectedCategory === "entertainment" && "text-[#00d991]"
-            }`}
+            className={`${selectedCategory === "entertainment" && "text-[#00d991]"}`}
           >
             Entertainment
           </a>
@@ -82,9 +79,7 @@ export default function CategoriesMenu() {
           <a
             href="#"
             onClick={() => handleClick("technology")}
-            className={`${
-              selectedCategory === "technology" && "text-[#00d991]"
-            }`}
+            className={`${selectedCategory === "technology" && "text-[#00d991]"}`}
           >
             Technology
           </a>

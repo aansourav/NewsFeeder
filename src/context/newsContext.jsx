@@ -1,10 +1,4 @@
-
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 import useNewsQuery from "../hooks/useNewsQuery";
 
@@ -24,11 +18,7 @@ const NewsContextProvider = ({ children }) => {
     return () => null;
   }, []);
 
-  return (
-    <NewsContext.Provider value={{ data, setData }}>
-      {children}
-    </NewsContext.Provider>
-  );
+  return <NewsContext.Provider value={{ data, setData }}>{children}</NewsContext.Provider>;
 };
 
 export default NewsContextProvider;
@@ -36,4 +26,3 @@ export default NewsContextProvider;
 export const useNews = () => {
   return useContext(NewsContext);
 };
-

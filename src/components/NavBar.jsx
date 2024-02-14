@@ -1,5 +1,5 @@
 import Logo from "../assets/logo.png";
-import { getFormatDate } from "../utilis/getFormatDate";
+import { getFormatDate } from "../utils/getFormatDate";
 import CategoriesMenu from "./CategoriesMenu";
 import SearchBox from "./SearchBox";
 
@@ -46,17 +46,16 @@ export default function Navbar() {
 
           <span>{getFormatDate(new Date())}</span>
         </div>
-        {/* Logo */}
+
         <a href="/">
           <img className="max-w-[100px] md:max-w-[165px]" src={Logo} alt="Lws" />
         </a>
-        {/* Logo Ends */}
-        {/* */}
+
         <div className="flex items-center space-x-3 lg:space-x-8">
           <SearchBox />
         </div>
       </div>
-      {/* categories */}
+
       <CategoriesMenu />
     </nav>
   );

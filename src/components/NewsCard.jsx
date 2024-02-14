@@ -1,4 +1,4 @@
-import { getFormatDate } from "../utilis/getFormatDate";
+import { getFormatDate } from "../utils/getFormatDate";
 
 const NewsItem = (props) => {
   const { content, title, urlToImage, publishedAt, className, dir } = props;

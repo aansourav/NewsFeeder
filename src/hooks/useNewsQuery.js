@@ -1,6 +1,5 @@
-import fetchData from "../utilis/fatchData";
-import { useState, useEffect } from "react";
-
+import { useEffect, useState } from "react";
+import fetchNewsData from "../utils/fetchNewsData";
 
 function useNewsQuery() {
   const [data, setData] = useState([]);
@@ -11,7 +10,7 @@ function useNewsQuery() {
 
   const fetchAPI = async (url) => {
     try {
-      const response = await fetchData(url);
+      const response = await fetchNewsData(url);
       setData(response);
       return response;
     } catch (error) {
